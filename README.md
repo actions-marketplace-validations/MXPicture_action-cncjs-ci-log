@@ -1,9 +1,9 @@
-# Github Action: Fetch Tags from DockerHub
+# Github Action: CNCjs - CI Logging
 
 ## Example
 
 ```yaml
-name: "Example workflow"
+name: 'Example workflow'
 on:
   pull_request:
   push:
@@ -20,16 +20,16 @@ jobs:
         id: log
         uses: mxpicture/action-cncjs-ci-log@v1
         with:
-          process_id: "<process id>"
-          run_idd: "${{ github.run_id }}"
-          version: "v1.10.3"
-          step: "ci"
-          start: "true"
-          region: "<firebase region>"
-          project: "<firebase project>"
-          function_name: "<firebase function>"
-          path: "<firebase path>"
-          connection_id: "<connection id>"
+          process_id: '<process id>'
+          run_idd: '${{ github.run_id }}'
+          version: 'v1.10.3'
+          step: 'ci'
+          start: 'true'
+          region: '<firebase region>'
+          project: '<firebase project>'
+          function_name: '<firebase function>'
+          path: '<firebase path>'
+          connection_id: '<connection id>'
 
       - name: An example step
         run: |
