@@ -12,7 +12,7 @@ interface Result {
   statusCode: number
   status: string
   message: string
-  result?: any
+  result?: object | string | number
 }
 
 export async function log(
