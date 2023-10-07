@@ -19,4 +19,4 @@ jobs:
       - name: Publish action
         uses: github-actions-publish/publish-action@v1
         with:
-          tag: v1.0.2
+          tag: v1.0.5
