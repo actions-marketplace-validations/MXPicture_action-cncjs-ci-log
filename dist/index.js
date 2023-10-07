@@ -55,7 +55,7 @@ function run() {
             core.setOutput('result', result);
         }
         catch (error) {
-            core.setFailed(error.message);
+            core.setFailed(error);
         }
     });
 }
