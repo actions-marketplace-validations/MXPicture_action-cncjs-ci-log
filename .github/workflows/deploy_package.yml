@@ -11,12 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use Node.js 20
-        uses: actions/setup-node@v2
+      - name: publish
+        uses: tgymnich/publish-github-action@v1
         with:
-          node-version: 20
-
-      - name: Publish action
-        uses: github-actions-publish/publish-action@v1
-        with:
-          tag: v1
+          github_token: ${{ secrets.ACCESS_TOKEN }}
