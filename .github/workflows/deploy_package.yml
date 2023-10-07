@@ -11,7 +11,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: set git parameters
+        run: |
+          git config --global user.name 'Git bot'
+          git config --global user.email 'bot@noreply.github.com'
+
       - name: Publish action
         uses: github-actions-publish/publish-action@v1
         with:
-          tag: v1.0.3
+          tag: v1.0.4
