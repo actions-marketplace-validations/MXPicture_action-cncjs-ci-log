@@ -19,9 +19,9 @@ jobs:
       - name: Publish action
         uses: github-actions-publish/publish-action@v1
         with:
-          tag: v1.0.6
+          tag: v1
 
       - name: Publish action
         uses: github-actions-publish/publish-action@v1
         with:
-          tag: v1
+          tag: v1.0.6
