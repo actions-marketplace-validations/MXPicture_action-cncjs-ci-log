@@ -1,0 +1,56 @@
+name: "CNCjs CI Logging"
+description: "Logs start and end of a workflow to a Firebase Function"
+author: "Tobias Bildner"
+inputs:
+  process_id:
+    required: true
+    description: "Logging Process ID"
+
+  run_id:
+    required: true
+    description: "Github Workflow ID"
+
+  version:
+    required: true
+    description: "CNCjs Version e.g. v1.10.3"
+
+  step:
+    required: true
+    description: "Logging Step"
+
+  start:
+    required: true
+    description: "Start or stop logging step"
+    default: "true"
+
+  region:
+    required: true
+    description: "Firebase region"
+
+  project:
+    required: true
+    description: "Firebase project"
+
+  function_name:
+    required: true
+    description: "Firebase function"
+
+  path:
+    required: true
+    description: "Firebase function"
+
+  connection_id:
+    required: true
+    description: "Firebase connection id"
+
+outputs:
+  result:
+    description: "HTTP Result"
+
+runs:
+  using: "node20"
+  main: "dist/index.js"
+
+branding:
+  icon: send
+  color: blue

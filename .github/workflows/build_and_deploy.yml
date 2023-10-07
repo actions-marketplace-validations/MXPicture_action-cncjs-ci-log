@@ -1,0 +1,15 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    uses: MXPicture/action-cncjs-ci-log/.github/workflows/build_package.yml@main
+  deploy:
+    needs: build
+    uses: MXPicture/action-cncjs-ci-log/.github/workflows/deploy_package.yml@main
