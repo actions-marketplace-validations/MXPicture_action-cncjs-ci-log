@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: publish
-        uses: tgymnich/publish-github-action@v1
+      - name: Publish action
+        uses: github-actions-publish/publish-action@v1
         with:
-          github_token: ${{ secrets.ACCESS_TOKEN }}
+          tag: v1.0.3
