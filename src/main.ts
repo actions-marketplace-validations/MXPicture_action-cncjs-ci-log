@@ -17,7 +17,7 @@ async function run(): Promise<void> {
       core.getInput('function_name'),
       core.getInput('path'),
       core.getInput('connection_id'),
-      params,
+      params, // logging parameters
     )
 
     core.setOutput('result', result)
